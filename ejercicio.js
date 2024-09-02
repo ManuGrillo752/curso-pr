@@ -32,19 +32,18 @@ function calculadora2(operacion, n1, n2){
     }else if(operacion == 'multiplicacion'){
         resultado.push(n1 * n2)
         return n1 * n2
-    }else if(operacion == 'division'){
+    }else if(operacion == 'division' && n2 != 0){
         resultado.push(n1 / n2)
         return n1 / n2
         
+    }else if(operacion == 'potencia'){
+        resultado.push(n1 ** n2)
+        return n1**n2
     }else{
         resultado.push('Syntax error')
         return 'Syntax error'
     }
     
 }
-calculadora2('division', 3, 3)
-calculadora2('suma', 3, 3)
-calculadora2('resta', 3, 3)
-calculadora2('multiplicacion', 3, 3)
-calculadora2('Manuel', 3, 3)
+calculadora2('division', 4, 0)
 console.log(resultado)
